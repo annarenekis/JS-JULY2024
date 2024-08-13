@@ -1,0 +1,120 @@
+Index: Lesson4/main.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б:\n\n// function calculateRectangleArea(a, b) {\n//     return a * b;\n// }\n// let area = calculateRectangleArea(5, 10);\n// console.log(\"Площа прямокутника:\", area);\n\n///////////створити функцію яка обчислює та повертає площу кола з радіусом r\nfunction calculateCircleArea(r) {\n    return Math.PI * r * r;\n}\nlet area = calculateCircleArea(5);\nconsole.log(\"Площа кола:\", area);\n\n//////////створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r\nfunction calculateCylinderSurfaceArea(r, h) {\n    return 2 * Math.PI * r * (r + h);\n}\nlet surfaceArea = calculateCylinderSurfaceArea(5, 10);\nconsole.log(\"Площа поверхні циліндра:\", surfaceArea);\n\n///////////створити функцію яка приймає масив та виводить кожен його елемент\n\nfunction printArrayElements(arr) {\n    for (let i = 0; i < arr.length; i++) {\n        console.log(arr[i]);\n    }\n}\nlet myArray = [1, 2, 3, 4, 5];\nprintArrayElements(myArray);\n\n/////////створити функцію яка створює параграф з текстом та виводить його через document.write. Текст задати через аргумент\n\nfunction createParagraph(text) {\n    document.write('<p>' + text + '</p>');\n}\ncreateParagraph('Lorem lorem lorem.');\n\n//////////створити функцію яка створює ul з трьома елементами li та виводить його через document.write. Текст li задати через аргумент всім однаковий\n\nfunction createItemList(text) {\n    document.write('<ul>');\n    for (let i = 0; i < 3; i++) {\n        document.write(`<li>${text}</li>`);\n    }\n    document.write('</ul>');\n}\ncreateItemList('Lorem');\n\n//////////створити функцію яка створює ul з  елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл) та виводить його через document.write\nfunction createList(text, itemCount) {\n    document.write('<ul>');\n    for (let i = 0; i < itemCount; i++) {\n        document.write(`<li>${text}</li>`);\n    }\n    document.write('</ul>');\n}\ncreateList('Item', 5);\n\n//////////створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список (ul li) та виводить його через document.write\n\nfunction createListFromArray(arr) {\n    document.write('<ul>');\n    for (let i = 0; i < arr.length; i++) {\n        document.write(`<li>${arr[i]}</li>`);\n    }\n    document.write('</ul>');\n}\nconst primitiveArray = [1, 'Hello', true, 42, 'World', false];\ncreateListFromArray(primitiveArray);\n\n//////////- створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.\nfunction displayObjects(arr) {\n    for (let i = 0; i < arr.length; i++) {\n        document.write('<div>');\n        document.write(`<p>ID: ${arr[i].id}</p>`);\n        document.write(`<p>Name: ${arr[i].name}</p>`);\n        document.write(`<p>Age: ${arr[i].age}</p>`);\n        document.write('</div>');\n        document.write('<hr>');\n    }\n}\nconst users = [\n    {id: 1, name: 'John Doe', age: 25},\n    {id: 2, name: 'Jane Smith', age: 30},\n    {id: 3, name: 'Alice Johnson', age: 28}\n];\n\ndisplayObjects(users);\n///////////// - створити функцію яка повертає найменьше число з масиву\nfunction findMinNumber(arr) {\n    let min = arr[0];\n    for (let i = 1; i < arr.length; i++) {\n        if (arr[i] < min) {\n            min = arr[i];\n        }\n    }\n    return min;\n}\nconst numbers = [45, 2, 68, 1, 33, -10, 89];\nconst minNumber = findMinNumber(numbers);\nconsole.log(minNumber);\n\n//////////////- створити функцію sum(arr) яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13\n\n// function sum(arr) {\n//     let total = 0;\n//     for (let i = 0; i < arr.length; i++) {\n//         total += arr[i];\n//     }\n//     return total;\n// }\n// const result = sum([1, 2, 10]);\n// console.log(result);\n\n////////- створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відповідних індексах:Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]\n\n// function swap(arr, index1, index2) {\n//     let temp = arr[index1];\n//     arr[index1] = arr[index2];\n//     arr[index2] = temp;\n//     return arr;\n// }\n// const result = swap([11, 22, 33, 44], 0, 1);\n// console.log(result);\n\n///////////// - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency):Приклад exchange(10000,[{currency:'USD',value:25},{currency:'EUR',value:42}],'USD') // => 400\nfunction exchange(sumUAH, currencyValues, exchangeCurrency) {\n    for (let i = 0; i < currencyValues.length; i++) {\n        if (currencyValues[i].currency === exchangeCurrency) {\n            return sumUAH / currencyValues[i].value;\n        }\n    }\n    return null;\n}\nconst result = exchange(10000, [{currency: 'USD', value: 25}, {currency: 'EUR', value: 42}], 'USD');\nconsole.log(result);
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Lesson4/main.js b/Lesson4/main.js
+--- a/Lesson4/main.js	(revision 8d8847bbff81e3e1388b754fc444d9873a6c87a2)
++++ b/Lesson4/main.js	(date 1723558195912)
+@@ -1,8 +1,10 @@
+ // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б:
+ 
+-// function calculateRectangleArea(a, b) {
+-//     return a * b;
+-// }
++function square(aNum, bNum) {
++    const result = aNum * bNum;
++    console.log(result);
++    return result;
++}
+ // let area = calculateRectangleArea(5, 10);
+ // console.log("Площа прямокутника:", area);
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"eb66faab-5602-458b-bc75-646e4eec4c16\" name=\"Changes\" comment=\"initial commit lesson3\">\n      <change afterPath=\"$PROJECT_DIR$/Lesson4/index.html\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Lesson4/main.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"HTML File\" />\n        <option value=\"JavaScript File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;annarenekis&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/annarenekis/JS-JULY2024.git&quot;,\n    &quot;accountId&quot;: &quot;81dc9f7e-87bb-4248-89b0-271408186d3e&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 5\n}</component>\n  <component name=\"ProjectId\" id=\"2kHnw8cEdjExtE4xWHIXFVApPDw\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"autoscrollToSource\" value=\"true\" />\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"DefaultHtmlFileTemplate\": \"HTML File\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"git-widget-placeholder\": \"master\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"last_opened_file_path\": \"/Users/admin/IdeaProjects/JS-JULY2024/Lesson4\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/Lesson4\" />\n    </key>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62\" />\n        <option value=\"bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"eb66faab-5602-458b-bc75-646e4eec4c16\" name=\"Changes\" comment=\"\" />\n      <created>1722949605860</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1722949605860</updated>\n      <workItem from=\"1722949606912\" duration=\"4183000\" />\n      <workItem from=\"1723053979940\" duration=\"1020000\" />\n      <workItem from=\"1723200671178\" duration=\"3426000\" />\n      <workItem from=\"1723465856274\" duration=\"71000\" />\n      <workItem from=\"1723551204155\" duration=\"1844000\" />\n      <workItem from=\"1723553060222\" duration=\"169000\" />\n      <workItem from=\"1723553232805\" duration=\"2832000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"initial commit\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1722952578256</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1722952578256</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"initial commit lesson2\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1723204016595</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1723204016595</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"initial commit lesson3\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1723553373627</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1723553373627</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"4\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"initial commit\" />\n    <MESSAGE value=\"initial commit lesson2\" />\n    <MESSAGE value=\"initial commit lesson3\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"initial commit lesson3\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 8d8847bbff81e3e1388b754fc444d9873a6c87a2)
++++ b/.idea/workspace.xml	(date 1723558334048)
+@@ -4,10 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="eb66faab-5602-458b-bc75-646e4eec4c16" name="Changes" comment="initial commit lesson3">
+-      <change afterPath="$PROJECT_DIR$/Lesson4/index.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Lesson4/main.js" afterDir="false" />
++    <list default="true" id="eb66faab-5602-458b-bc75-646e4eec4c16" name="Changes" comment="initial commit lesson4">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Lesson4/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson4/main.js" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -49,21 +48,21 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "DefaultHtmlFileTemplate": "HTML File",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "master",
+-    "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "/Users/admin/IdeaProjects/JS-JULY2024/Lesson4",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/Users/admin/IdeaProjects/JS-JULY2024/Lesson4&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/Lesson4" />
+@@ -91,7 +90,8 @@
+       <workItem from="1723465856274" duration="71000" />
+       <workItem from="1723551204155" duration="1844000" />
+       <workItem from="1723553060222" duration="169000" />
+-      <workItem from="1723553232805" duration="2832000" />
++      <workItem from="1723553232805" duration="2873000" />
++      <workItem from="1723556398757" duration="993000" />
+     </task>
+     <task id="LOCAL-00001" summary="initial commit">
+       <option name="closed" value="true" />
+@@ -117,7 +117,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1723553373627</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="initial commit lesson4">
++      <option name="closed" value="true" />
++      <created>1723556099228</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1723556099228</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -127,6 +135,7 @@
+     <MESSAGE value="initial commit" />
+     <MESSAGE value="initial commit lesson2" />
+     <MESSAGE value="initial commit lesson3" />
+-    <option name="LAST_COMMIT_MESSAGE" value="initial commit lesson3" />
++    <MESSAGE value="initial commit lesson4" />
++    <option name="LAST_COMMIT_MESSAGE" value="initial commit lesson4" />
+   </component>
+ </project>
+\ No newline at end of file
