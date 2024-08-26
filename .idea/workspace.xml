@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb66faab-5602-458b-bc75-646e4eec4c16" name="Changes" comment="викор. метод toString() до 6го завд.">
+    <list default="true" id="eb66faab-5602-458b-bc75-646e4eec4c16" name="Changes" comment="викон. стрілочними функціями">
+      <change afterPath="$PROJECT_DIR$/Lesson9/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson5/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson5/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +98,7 @@
       <workItem from="1723556398757" duration="6032000" />
       <workItem from="1724160697813" duration="9022000" />
       <workItem from="1724417137242" duration="3293000" />
-      <workItem from="1724696105855" duration="1620000" />
+      <workItem from="1724696105855" duration="2742000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -172,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724696858341</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="викон. стрілочними функціями">
+      <option name="closed" value="true" />
+      <created>1724697755391</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1724697755391</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +195,7 @@
     <MESSAGE value="added js" />
     <MESSAGE value="додала перевірку до першого завд." />
     <MESSAGE value="викор. метод toString() до 6го завд." />
-    <option name="LAST_COMMIT_MESSAGE" value="викор. метод toString() до 6го завд." />
+    <MESSAGE value="викон. стрілочними функціями" />
+    <option name="LAST_COMMIT_MESSAGE" value="викон. стрілочними функціями" />
   </component>
 </project>
