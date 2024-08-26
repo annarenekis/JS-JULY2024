@@ -75,8 +75,9 @@ function stringToArray(str) {
 console.log(stringToArray(`Ревуть воли як ясла повні`));
 
 // - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
-const  numbers = [10,8,-7,55,987,-1011,0,1050,0];
-const stringNumbers = numbers.map(number => number + '');
+
+const numbers = [10, 8, -7, 55, 987, -1011, 0, 1050, 0];
+const stringNumbers = numbers.map(number => number.toString());
 console.log(stringNumbers);
 
 // створити функцію sortNums(array,direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
