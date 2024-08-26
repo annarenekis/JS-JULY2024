@@ -3,6 +3,12 @@
 //     Подумати і реалізувати логіку, в якій кінцевий об'єкт буде мати функції,які в нього були до цього моменту.
 
 function cloner(obj) {
+    if (obj === undefined || obj === null) {
+        throw new Error('Error');
+    }
+    if (typeof obj === 'number' && isNaN(obj)) {
+        return NaN;
+    }
     if (obj) {
         let functions = [];
         for (const  key in obj) {
