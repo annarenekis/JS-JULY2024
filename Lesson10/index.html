@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+<label for="age">Введіть ваш вік:</label>
+<input type="number" id="age" placeholder="Ваш вік">
+<button id="checkAge">Перевірити вік</button>
+
+<p id="message"></p>
+
+<script>
+    // - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
+
+    const btn = document.getElementById('checkAge');
+
+    btn.addEventListener('click', () => {
+        const ageInput = document.getElementById('age');
+        const age = parseInt(ageInput.value);
+        const message = document.getElementById('message');
+
+        if (isNaN(age)) {
+            message.textContent = 'Будь ласка, введіть коректне значення.';
+            message.style.color = 'red';
+        } else if (age < 18) {
+            message.textContent = 'Mенше 18 років.';
+            message.style.color = 'orange';
+        } else {
+            message.textContent = 'Вік дозволений.';
+            message.style.color = 'green';
+        }
+    });
+    // - Створити довільний елемент з id = text та створити кнопку.Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
+
+    const button = document.getElementsByTagName('button')[0];
+
+    button.addEventListener('click', () => {
+        const div = document.getElementById('text');
+        div.style.display = 'none';
+    });
+
+</script>
+</body>
+<script src="main.js"></script>
+</html>

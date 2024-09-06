@@ -6,52 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        /*//////////*/
-        .wrap {
-            padding: 20px;
-        }
-        .collapse {
-            margin: 10px;
-        }
-        .alpha {
-            font-size: 20px;
-        }
-        .beta {
-            color: white;
-            background-color: blue;
-        }
-        /*/////////*/
-        .course {
-            border: 1px solid #ccc;
-            margin: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-        .course-title {
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        .course-duration {
-            color: #555;
-        }
-        /*///////*/
-        .item {
-            border: 1px solid #ccc;
-            margin: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-        .heading {
-            font-size: 1.5em;
-            margin: 0;
-        }
-        .description {
-            color: #555;
-        }
-    </style>
+
 </head>
 <body>
 <script>
@@ -64,6 +19,12 @@
     const block = document.createElement('div');
     block.classList.add('wrap', 'collapse', 'alpha', 'beta');
     block.textContent = 'The block.';
+
+    block.style.padding = '20px';
+    block.style.margin = '10px';
+    block.style.fontSize = '20px';
+    block.style.color = 'white';
+    block.style.backgroundColor = 'blue';
 
     document.body.appendChild(block);
 
@@ -98,14 +59,23 @@
     for (const course of coursesAndDurationArray1) {
         const courseDiv = document.createElement('div');
         courseDiv.className = 'course';
+        courseDiv.style.border = '1px solid #ccc';
+        courseDiv.style.margin = '10px';
+        courseDiv.style.padding = '10px';
+        courseDiv.style.borderRadius = '5px';
+        courseDiv.style.backgroundColor = '#f9f9f9';
 
         const title = document.createElement('div');
         title.className = 'course-title';
         title.textContent = `Title: ${course.title}`;
+        title.textContent = `Title: ${course.title}`;
+        title.style.fontWeight = 'bold';
+        title.style.fontSize = '1.2em';
 
         const duration = document.createElement('div');
         duration.className = 'course-duration';
         duration.textContent = `Duration: ${course.monthDuration} months`;
+        duration.style.color = '#555';
 
         courseDiv.appendChild(title);
         courseDiv.appendChild(duration);
@@ -126,14 +96,23 @@
     for (const course of coursesAndDurationArray2) {
         const itemDiv = document.createElement('div');
         itemDiv.className = 'item';
+        itemDiv.style.border = '1px solid #ccc';
+        itemDiv.style.margin = '10px';
+        itemDiv.style.padding = '10px';
+        itemDiv.style.borderRadius = '5px';
+        itemDiv.style.backgroundColor = '#f9f9f9';
 
         const heading = document.createElement('h1');
         heading.className = 'heading';
         heading.textContent = course.title;
+        heading.textContent = course.title;
+        heading.style.fontSize = '1.5em';
+        heading.style.margin = '0';
 
         const description = document.createElement('p');
         description.className = 'description';
         description.textContent = `Duration: ${course.monthDuration} months`;
+        description.style.color = '#555';
 
         itemDiv.appendChild(heading);
         itemDiv.appendChild(description);

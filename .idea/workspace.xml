@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb66faab-5602-458b-bc75-646e4eec4c16" name="Changes" comment="викон. стрілочними функціями">
-      <change afterPath="$PROJECT_DIR$/Lesson9/index.html" afterDir="false" />
+    <list default="true" id="eb66faab-5602-458b-bc75-646e4eec4c16" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/Lesson10/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson10/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson11/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson11/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson12/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson12/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mini-project/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mini-project/post-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mini-project/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mini-project/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mini-project/user-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson9/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson9/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -58,6 +70,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/admin/IdeaProjects/JS-JULY2024&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -98,7 +111,11 @@
       <workItem from="1723556398757" duration="6032000" />
       <workItem from="1724160697813" duration="9022000" />
       <workItem from="1724417137242" duration="3293000" />
-      <workItem from="1724696105855" duration="2742000" />
+      <workItem from="1724696105855" duration="3049000" />
+      <workItem from="1725360384786" duration="712000" />
+      <workItem from="1725366178059" duration="1000" />
+      <workItem from="1725368304098" duration="4111000" />
+      <workItem from="1725546720270" duration="3935000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -180,14 +197,21 @@
       <option name="project" value="LOCAL" />
       <updated>1724697755391</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1724701986301</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1724701986301</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit" />
     <MESSAGE value="initial commit lesson2" />
     <MESSAGE value="initial commit lesson3" />
     <MESSAGE value="initial commit lesson4" />
@@ -196,6 +220,7 @@
     <MESSAGE value="додала перевірку до першого завд." />
     <MESSAGE value="викор. метод toString() до 6го завд." />
     <MESSAGE value="викон. стрілочними функціями" />
-    <option name="LAST_COMMIT_MESSAGE" value="викон. стрілочними функціями" />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
