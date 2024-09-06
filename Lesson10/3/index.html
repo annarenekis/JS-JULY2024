@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form name="form">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="text" name="surname" placeholder="Surname" required>
+    <input type="number" name="age" placeholder="Age" required>
+    <button type="submit">Send</button>
+</form>
+
+<div id="target"></div>
+<script>
+    // Стоврити форму з трьома полями для name,surname,age та кнопкою. При натисканні на кнопку зчитати данні з полів, та вивести об'єкт в документ. Іншими словами : заповниои форму, натиснули кнопку, під формою з'явився блок з вашим об'єктом
+    const form = document.forms.form;
+    const target = document.getElementById('target');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nameValue = form.name.value;
+        const surnameValue = form.surname.value;
+        const ageValue = +form.age.value;
+
+        const obj = { name: nameValue, surname: surnameValue, age: ageValue };
+
+        target.innerText = `Name: ${obj.name}, Surname: ${obj.surname}, Age: ${obj.age}`;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+<div id="price">100грн</div>
+
+<script>
+    // створити сторінку з довільним блоком, в середині якого є значення "100грн"
+    // при перезавантаженні сторінки до значаення додається по 10грн, але !!!
+    //     зміна ціни відбувається тільки на перезавантаження, які відбулись пізніше ніж 10 секунд після попереднього.
+    //     При перезавантаженні, яке відбулось раніше ніж минуло 10 секунд - нічого не відбувається
+
+    const currentTime = new Date().getTime();
+
+    const lastReloadTime = localStorage.getItem('lastReloadTime');
+
+    let price = localStorage.getItem('price') || 100;
+
+    if (!lastReloadTime || currentTime - lastReloadTime > 10000) {
+        price = +price + 10;  // Додаємо 10 грн
+        localStorage.setItem('price', price);  // Оновлюємо ціну в localStorage
+    }
+
+    localStorage.setItem('lastReloadTime', currentTime);
+
+    document.getElementById('price').innerText = `${price}грн`;
+</script>
+</body>
+</html>

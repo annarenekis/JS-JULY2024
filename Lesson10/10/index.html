@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+<div id="content"></div>
+<div class="pagination-buttons">
+    <button id="prev">Prev</button>
+    <button id="next">Next</button>
+</div>
+
+<script>
+    // зробити масив на 100 об'єктів та дві кнопки prev next
+    // при завантажені сторінки з'являються перші 10 об'єктів.
+    //     При натисканні next виводяться наступні 10 об'єктів
+    // При натисканні prev виводяться попередні 10 об'єктів
+    const data = Array.from({ length: 100 }, (_, index) => ({ id: index + 1, name: `Item ${index + 1}` }));
+
+    const itemsPerPage = 10;
+    let currentPage = 0;
+
+    const contentDiv = document.getElementById('content');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    function displayItems() {
+        contentDiv.innerHTML = '';
+        const start = currentPage * itemsPerPage;
+        const end = start + itemsPerPage;
+        const itemsToShow = data.slice(start, end);
+
+        itemsToShow.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.innerText = `ID: ${item.id}, Name: ${item.name}`;
+            contentDiv.appendChild(itemDiv);
+        });
+
+        prevButton.disabled = currentPage === 0;
+        nextButton.disabled = end >= data.length;
+    }
+
+    prevButton.addEventListener('click', () => {
+        if (currentPage > 0) {
+            currentPage--;
+            displayItems();
+        }
+    });
+
+    nextButton.addEventListener('click', () => {
+        if ((currentPage + 1) * itemsPerPage < data.length) {
+            currentPage++;
+            displayItems();
+        }
+    });
+    displayItems();
+
+
+</script>
+</body>
+</html>
